@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+ <struts>
+ 	<package name="service"
+ 	   namespace="/service" extends="netctoss"> 
+ 		<!-- 查询Action -->
+ 		<action name="findService"
+ 			class="com.tarena.action.service.FIndServiceAction">
+ 			<param name="pageSize">4</param>
+ 		</action>
+ 		
+ 		<!-- 跳转到新增Action -->
+ 		<action name="toAddService"
+ 			class="com.tarena.action.service.ToAddServiceAction">
+ 			<result name="success">
+ 				/WEB-INF/service/addService.jsp
+ 			</result>
+ 		</action>
+ 		
+ 		<!-- 查找账务账号Action -->
+ 		<action name="searchAccount"
+ 			class="com.tarena.action.service.SearchAccountAction">
+ 			<result name="success" type="json">
+ 				<param name="root">account</param>
+ 			</result>
+ 		</action>
+ 	</package>
+ </struts>
