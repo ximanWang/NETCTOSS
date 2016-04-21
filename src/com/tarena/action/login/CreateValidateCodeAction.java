@@ -4,9 +4,6 @@ import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.util.Map;
 
-import javax.jms.Session;
-
-import com.opensymphony.xwork2.ActionSupport;
 import com.tarena.action.BaseAction;
 import com.tarena.util.ImageUtil;
 /**
